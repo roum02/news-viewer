@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import NewsList from "./components/NewsList";
 
 // apiKey 3c3956ba55574481865e14506029d508
 
@@ -16,18 +17,19 @@ function App() {
     }
   };
   return (
-    <div>
-      <div>
-        <button onClick={onClick}>불러오기</button>
-      </div>
-      {data && (
-        <textarea
-          rows={7}
-          value={JSON.stringify(data, null, 2)}
-          readOnly={true}
-        />
-      )}
-    </div>
+    <NewsList />
+    // <div>
+    //   <div>
+    //     <button onClick={onClick}>불러오기</button>
+    //   </div>
+    //   {data && (
+    //     <textarea
+    //       rows={7}
+    //       value={JSON.stringify(data, null, 2)}
+    //       readOnly={true}
+    //     />
+    //   )}
+    // </div>
   );
 }
 
